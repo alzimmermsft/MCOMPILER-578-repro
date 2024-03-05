@@ -14,6 +14,9 @@ Re-run the build using `mvn install`. Again, the build should run compilation fo
 time you'll see it states that there were no files to compile in the `base-modules-compile`. In `/target/classes` the
 class level for the `module-info.class` should be the class level of the JDK running build.
 
+If you change the version of `maven-compiler-plugin` to `3.10.1` you'll see that the `base-modules-compile` execution
+is always ran, no matter if `mvn clean install` or `mvn install` is used.
+
 ## Example output
 
 `mvn clean install`

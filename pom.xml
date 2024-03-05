@@ -10,6 +10,8 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!-- Changing this to 3.10.1 will result in base-modules-compile always compiling the module-info.java -->
+    <maven.compiler.plugin.version>3.12.1</maven.compiler.plugin.version>
   </properties>
 
   <build>
@@ -17,7 +19,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.12.1</version>
+        <version>${maven.compiler.plugin.version}</version>
         <configuration>
           <showWarnings>true</showWarnings>
           <failOnWarning>true</failOnWarning>
@@ -59,8 +61,7 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.12.1
-            </version>
+            <version>${maven.compiler.plugin.version}</version>
             <configuration>
               <compilerArgs combine.children="append">
                 <arg>-Xlint:-module</arg>
